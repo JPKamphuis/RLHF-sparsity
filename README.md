@@ -8,8 +8,6 @@ The model-based approach uses the MOSEK solver, which requires a license. It can
 # Running the code
 The jupyter notebooks contain all the code to replicate the findings and figures in our paper.
 
-model_free.ipynb defines the model-free REINFORCE algorithm which updates the policy with the direct human feedback
+model_free.ipynb defines the model-free REINFORCE algorithm which updates the policy with the direct human feedback. The frequency of feedback can be set with the feedback_every parameter. Having feedback_every > 50 will use end-of-trajectory feedback.
 
-baseline(EOT)_model_based.ipynb estimates the reward function and learns from only end-of-trajectory feedback
-
-sparse_feedback_model_based.ipynb implements the same framework as the previous notebook but samples feedback more often than end-of-trajectory.
+model_based.ipynb defines the modeel-based algorithm which calculates an underlying reward function. The end-of-trajectory and denser feedback experiments are run separately in this notebook.
